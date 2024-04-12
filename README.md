@@ -1,5 +1,5 @@
 # Sorting Algorithms in Python
-This repository contains my learning and testing of some of the fundamental sorting algorithms. The aim is to understand and rememeber the basic implementations of the algorithms.
+This repository contains my learning and testing of some of the fundamental sorting algorithms. The aim is to understand the algorithms.
 
 ### Bubble Sort
 The key to this algorithm is thinking about the largest values being shifted or "bubbled" up to the right side (in ascending sorts). During each pass through the list, the largest 
