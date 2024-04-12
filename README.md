@@ -19,6 +19,26 @@ We perform this 'walking' for each element in the array. And so for `O(n)` eleme
 
 ### Insertion Sort
 
+### Merge Sort
+Merge sort is a divide and conquer algorithm. This means we **break the problem down** into parts and then break those parts down **into smaller problems**, and we continue to divide the problem into smaller and smaller problems until we have some **atomic problem** that we **can solve** (a base case). We then solve that subproblem (known as conquering) and follow that by **combining** all of the subproblems into the solution to our original problem. 
+
+We apply this concept to merge sort by splitting the original array into two halves. We recurisvely perform merge sort of those two arrays until we have an array that is of size zero or one. The key is that an array of size one or zero is considered sorted - this becomes our base case. We now begin merging back all the arrays of size zero or one by combining them in order. We do this until we have an array of equal size to the original and we have now solved our original problem. 
+
+![Merge sort algorithm diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/600px-Merge_sort_algorithm_diagram.svg.png "Merge sort algorithm diagram")
+The above image shows the divide step (in Red), conquering step (in Gray), and finally the combining step (in Green). 
+
+
+*Image attribution*
+The image used in this README is "Merge sort algorithm diagram.svg" by [VineetKumar](https://www.doorstop.net/#/) at English Wikipedia. The original source of the image can be found on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Merge_sort_algorithm_diagram.svg). This image is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+**Time complexity**: We use a recurrence to express the time complexity of merge sort. This recurrence relation is given by `T(n) = 2T(n/2) + O(n)`. 
+We use the [Master theorem](https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture3.pdf) to solve this as our recurrence is of the form `T(n) = aT(n/b) + f(n)`. 
+We can see that Merge Sort breaks the problem down into `a = 2` subproblems because we divide our larger array into **two** subarrays. Each array is of size `n/2` size where `b = 2`. In our combination/merge step, we perform `O(n)` work to merge each array at each combine step. 
+
+For more information and analysis, please see:
+[Solving Recurrences Example - Merge Sort](https://www.youtube.com/watch?v=gvfWeX8GCS8)
+
+**Space complexity**: `O(n)` because we create temporary arrays `leftHalf` and `rightHalf` to divide the input array.
 
 
 
