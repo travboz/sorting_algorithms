@@ -19,3 +19,14 @@ We perform this 'walking' for each element in the array. And so for `O(n)` eleme
 
 ### Insertion Sort
 
+
+
+
+### How to use this repo
+All of the algorithms are contained within their respective folders and will contain at least two files. 
+I will use Bubble Sort as an example. 
+Within See `sorting_algorithms/bubble_sort` there are two files. 
+|File | Description| 
+| -- | -- | 
+| `bubble_sort.py` | Bubble sort algorithm implemented in Python. Contains a function which accepts an array and returns an, ascending order, sorted array. |
+| `test_bubble.py` | Contains tests for the algorithm. |
